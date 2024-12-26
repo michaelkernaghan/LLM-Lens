@@ -1,0 +1,149 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "type": "object",
+    "properties": {
+        "metadata": {
+            "type": "object",
+            "properties": {
+                "title": { "type": "string" },
+                "authors": { "type": "array", "items": { "type": "string" } },
+                "publication_date": { "type": "string" },
+                "arxiv_id": { "type": "string" },
+                "paper_url": { 
+                    "type": "string",
+                    "pattern": "^https://arxiv.org/(html|abs|pdf)/[0-9]{4}.[0-9]{5}(v[0-9]+)?$"
+                },
+                "tags": { "type": "array", "items": { "type": "string" } },
+                "citation": {
+                    "type": "object",
+                    "properties": {
+                        "bibtex": { "type": "string" },
+                        "apa": { "type": "string" }
+                    }
+                }
+            },
+            "required": ["title", "authors", "publication_date", "arxiv_id", "paper_url"]
+        },
+        "content": {
+            "type": "object",
+            "properties": {
+                "summary": { "type": "string" },
+                "key_points": { "type": "array", "items": { "type": "string" } },
+                "methodology": { "type": "string" },
+                "results": { "type": "string" },
+                "implications": { "type": "string" },
+                "section_references": {
+                    "type": "array",
+                    "items": {
+                        "type": "object",
+                        "properties": {
+                            "section": { "type": "string" },
+                            "page": { "type": "integer" },
+                            "quote": { "type": "string" }
+                        },
+                        "required": ["section"]
+                    }
+                }
+            },
+            "required": ["summary", "section_references"]
+        },
+        "analysis": {
+            "type": "object",
+            "properties": {
+                "claude": {
+                    "type": "object",
+                    "properties": {
+                        "version": { "type": "string" },
+                        "main_analysis": { "type": "string" },
+                        "key_insights": { "type": "array", "items": { "type": "string" } },
+                        "concerns": { "type": "array", "items": { "type": "string" } },
+                        "related_papers": {
+                            "type": "array",
+                            "items": {
+                                "type": "object",
+                                "properties": {
+                                    "title": { "type": "string" },
+                                    "arxiv_id": { "type": "string" },
+                                    "relation": { "type": "string" }
+                                },
+                                "required": ["title", "arxiv_id", "relation"]
+                            }
+                        },
+                        "citations": {
+                            "type": "array",
+                            "items": {
+                                "type": "object",
+                                "properties": {
+                                    "claim": { "type": "string" },
+                                    "section": { "type": "string" },
+                                    "quote": { "type": "string" }
+                                },
+                                "required": ["claim", "section"]
+                            }
+                        }
+                    },
+                    "required": ["version", "main_analysis", "citations"]
+                },
+                "gpt4": {
+                    "type": "object",
+                    "properties": {
+                        "version": { "type": "string" },
+                        "main_analysis": { "type": "string" },
+                        "key_insights": { "type": "array", "items": { "type": "string" } },
+                        "concerns": { "type": "array", "items": { "type": "string" } },
+                        "related_papers": {
+                            "type": "array",
+                            "items": {
+                                "type": "object",
+                                "properties": {
+                                    "title": { "type": "string" },
+                                    "arxiv_id": { "type": "string" },
+                                    "relation": { "type": "string" }
+                                },
+                                "required": ["title", "arxiv_id", "relation"]
+                            }
+                        },
+                        "citations": {
+                            "type": "array",
+                            "items": {
+                                "type": "object",
+                                "properties": {
+                                    "claim": { "type": "string" },
+                                    "section": { "type": "string" },
+                                    "quote": { "type": "string" }
+                                },
+                                "required": ["claim", "section"]
+                            }
+                        }
+                    },
+                    "required": ["version", "main_analysis", "citations"]
+                }
+            }
+        },
+        "dialogue": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "model": { "type": "string", "enum": ["claude", "gpt4"] },
+                    "content": { "type": "string" },
+                    "references": {
+                        "type": "array",
+                        "items": {
+                            "type": "object",
+                            "properties": {
+                                "type": { "type": "string", "enum": ["paper", "concept", "model"] },
+                                "reference": { "type": "string" },
+                                "quote": { "type": "string" },
+                                "section": { "type": "string" }
+                            },
+                            "required": ["type", "reference", "section"]
+                        }
+                    }
+                },
+                "required": ["model", "content", "references"]
+            }
+        }
+    },
+    "required": ["metadata", "content", "analysis", "dialogue"]
+} 
