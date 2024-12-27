@@ -1,32 +1,28 @@
 /* Base styles */
 :root {
     --primary-color: #2563eb;
-    --background-color: #f8fafc;
-    --text-color: #1e293b;
-    --card-background: #ffffff;
-    --border-color: #e2e8f0;
+    --text-color: #1f2937;
+    --background-color: #ffffff;
+    --secondary-background: #f3f4f6;
+    --border-color: #e5e7eb;
     --claude-color: #5046e4;
     --gpt4-color: #19c37d;
-    --dialogue-color: #8b5cf6;
-}
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
 }
 
 body {
-    font-family: 'Inter', sans-serif;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
     line-height: 1.6;
     color: var(--text-color);
-    background-color: var(--background-color);
+    margin: 0;
+    padding: 0;
+    background: var(--background-color);
 }
 
-/* Header and Navigation */
+/* Navigation */
 header {
-    background-color: var(--card-background);
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid var(--border-color);
+    padding: 1rem 0;
+    background: var(--background-color);
     position: sticky;
     top: 0;
     z-index: 100;
@@ -35,170 +31,75 @@ header {
 nav {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 1rem;
+    padding: 0 1rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-.logo {
+.logo a {
     font-size: 1.5rem;
     font-weight: 600;
     color: var(--primary-color);
+    text-decoration: none;
 }
 
 .nav-links a {
+    margin-left: 2rem;
     color: var(--text-color);
     text-decoration: none;
-    margin-left: 2rem;
-    font-weight: 500;
-    transition: color 0.2s;
 }
 
 .nav-links a:hover {
     color: var(--primary-color);
 }
 
-/* Hero Section */
+/* Main content */
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+}
+
 .hero {
     text-align: center;
-    padding: 4rem 1rem;
-    background: linear-gradient(to bottom, #2563eb08, var(--background-color));
+    padding: 4rem 0;
 }
 
 .hero h1 {
     font-size: 2.5rem;
     margin-bottom: 1rem;
-    color: var(--text-color);
 }
 
-.hero p {
-    font-size: 1.25rem;
-    color: #64748b;
-    max-width: 600px;
-    margin: 0 auto;
-}
-
-/* Research Grid */
-.research-grid {
-    max-width: 1200px;
-    margin: 2rem auto;
-    padding: 0 1rem;
-    display: grid;
-    gap: 2rem;
-}
-
-.research-card {
-    background-color: var(--card-background);
+/* Paper entries */
+.paper-entry {
+    border: 1px solid var(--border-color);
     border-radius: 0.5rem;
     padding: 1.5rem;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-    transition: transform 0.2s, box-shadow 0.2s;
-    display: flex;
-    flex-direction: column;
-}
-
-.research-card:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-.paper-info {
-    flex: 1;
     margin-bottom: 1.5rem;
+    background: var(--background-color);
 }
 
-.paper-info h2 {
-    font-size: 1.25rem;
-    margin-bottom: 0.5rem;
-    color: var(--text-color);
+.paper-entry h2 {
+    margin: 0 0 1rem 0;
+    font-size: 1.5rem;
 }
 
-.authors {
-    color: #64748b;
-    font-size: 0.875rem;
-    margin-bottom: 0.5rem;
-}
-
-.abstract {
-    color: #475569;
-    font-size: 0.875rem;
-}
-
-.ai-commentary {
-    border-top: 1px solid var(--border-color);
-    padding-top: 1rem;
-}
-
-.ai-commentary h3 {
-    font-size: 1rem;
+.paper-entry a {
     color: var(--primary-color);
+    text-decoration: none;
+}
+
+.meta {
+    color: #6b7280;
+    font-size: 0.9rem;
     margin-bottom: 0.5rem;
 }
 
-.ai-commentary p {
-    color: #475569;
-    font-size: 0.875rem;
-    font-style: italic;
-}
-
-/* About Section */
-.about-section {
+/* Paper discussion page */
+.paper-discussion {
     max-width: 800px;
-    margin: 4rem auto;
-    padding: 0 1rem;
-    text-align: center;
-}
-
-.about-section h2 {
-    font-size: 2rem;
-    margin-bottom: 1rem;
-}
-
-.about-section p {
-    color: #475569;
-}
-
-/* Footer */
-footer {
-    text-align: center;
-    padding: 2rem;
-    background-color: var(--card-background);
-    color: #64748b;
-    border-top: 1px solid var(--border-color);
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    .hero h1 {
-        font-size: 2rem;
-    }
-    
-    .hero p {
-        font-size: 1rem;
-    }
-    
-    .research-card {
-        padding: 1rem;
-    }
-}
-
-@media (max-width: 480px) {
-    .nav-links a {
-        margin-left: 1rem;
-        font-size: 0.875rem;
-    }
-    
-    .hero h1 {
-        font-size: 1.75rem;
-    }
-}
-
-/* Paper Discussion Page */
-.paper-page main {
-    max-width: 900px;
     margin: 0 auto;
-    padding: 2rem 1rem;
 }
 
 .paper-header {
@@ -207,58 +108,43 @@ footer {
 }
 
 .paper-header h1 {
-    font-size: 2.5rem;
+    font-size: 2rem;
     margin-bottom: 1rem;
-    line-height: 1.2;
+    line-height: 1.3;
 }
 
 .paper-meta {
-    color: #64748b;
-    font-size: 0.875rem;
+    color: #6b7280;
+    margin-bottom: 2rem;
 }
 
-.paper-link {
+.reference {
+    font-family: monospace;
+    background: var(--secondary-background);
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.25rem;
     display: inline-block;
-    margin-top: 1rem;
-    color: var(--primary-color);
-    text-decoration: none;
-    font-weight: 500;
-}
-
-.paper-link:hover {
-    text-decoration: underline;
-}
-
-.paper-summary {
-    margin-bottom: 3rem;
-    font-size: 1.125rem;
-    line-height: 1.7;
 }
 
 .claude-analysis,
 .gpt4-analysis,
 .model-dialogue {
-    margin-bottom: 3rem;
-    padding: 2rem;
-    background: var(--card-background);
+    background: var(--background-color);
+    border: 1px solid var(--border-color);
     border-radius: 0.5rem;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+    margin-bottom: 3rem;
 }
 
 .model-meta {
-    margin-bottom: 1rem;
     display: flex;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
     align-items: center;
-    gap: 0.5rem;
 }
 
 .model-name {
     font-weight: 600;
-}
-
-.model-version {
-    color: #64748b;
-    font-size: 0.875rem;
 }
 
 .claude-analysis .model-name {
@@ -269,68 +155,101 @@ footer {
     color: var(--gpt4-color);
 }
 
-.analysis-content p,
-.dialogue-entry p {
+.model-version {
+    color: #6b7280;
+    font-size: 0.9rem;
+}
+
+.analysis-content > div {
+    margin-bottom: 2rem;
+}
+
+.analysis-content h3 {
+    color: #4b5563;
+    font-size: 1.1rem;
     margin-bottom: 1rem;
-    line-height: 1.7;
 }
 
-.analysis-content ul {
-    margin: 1rem 0;
-    padding-left: 1.5rem;
-}
-
-.analysis-content li {
-    margin-bottom: 0.5rem;
-}
-
-.model-dialogue {
-    background: linear-gradient(to bottom, #f8fafc, #ffffff);
-}
-
-.dialogue-entry {
+.log-line {
+    font-size: 1.1rem;
+    font-style: italic;
+    color: #1f2937;
     margin-bottom: 2rem;
     padding: 1rem;
+    background: var(--secondary-background);
     border-radius: 0.5rem;
 }
 
-.dialogue-entry.claude {
-    background: rgba(80, 70, 228, 0.05);
-    border-left: 3px solid var(--claude-color);
+.detailed-analysis,
+.key-insights,
+.concerns {
+    padding: 1rem 0;
 }
 
-.dialogue-entry.gpt4 {
-    background: rgba(25, 195, 125, 0.05);
-    border-left: 3px solid var(--gpt4-color);
+.key-insights ul,
+.concerns ul {
+    margin: 0;
+    padding-left: 1.5rem;
 }
 
-.related-papers {
+.key-insights li,
+.concerns li {
+    margin-bottom: 0.5rem;
+}
+
+.warhol-take {
+    background: linear-gradient(135deg, rgba(255, 105, 180, 0.05), rgba(255, 255, 0, 0.05));
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    border-left: 3px solid #ff69b4;
+}
+
+.warhol-take .quote {
+    font-style: italic;
+    margin: 0;
+}
+
+.dialogue-content {
+    padding: 1rem;
+}
+
+.dialogue-content p {
+    margin-bottom: 1.5rem;
+}
+
+/* Footer */
+footer {
+    border-top: 1px solid var(--border-color);
+    padding: 2rem 0;
     margin-top: 4rem;
+    background: var(--secondary-background);
 }
 
-.related-papers ul {
-    list-style: none;
-    padding: 0;
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+    text-align: center;
 }
 
-.related-papers li {
-    margin-bottom: 1rem;
+.art-reference {
+    margin-top: 0.5rem;
+    font-size: 0.9rem;
 }
 
-.related-papers a {
+.art-reference a {
     color: var(--primary-color);
     text-decoration: none;
-    font-weight: 500;
 }
 
-.related-papers a:hover {
-    text-decoration: underline;
-}
-
-/* Responsive adjustments for paper pages */
+/* Responsive design */
 @media (max-width: 768px) {
-    .paper-header h1 {
+    .hero h1 {
         font-size: 2rem;
+    }
+    
+    .nav-links a {
+        margin-left: 1rem;
     }
     
     .claude-analysis,
@@ -338,75 +257,4 @@ footer {
     .model-dialogue {
         padding: 1.5rem;
     }
-}
-
-@media (max-width: 480px) {
-    .paper-header h1 {
-        font-size: 1.75rem;
-    }
-    
-    .claude-analysis,
-    .gpt4-analysis,
-    .model-dialogue {
-        padding: 1rem;
-    }
-}
-
-/* Model Indicators */
-.model-indicators {
-    display: flex;
-    gap: 0.5rem;
-    flex-wrap: wrap;
-    margin-top: 1rem;
-}
-
-.claude-badge,
-.gpt4-badge,
-.dialogue-badge {
-    font-size: 0.75rem;
-    padding: 0.25rem 0.75rem;
-    border-radius: 1rem;
-    font-weight: 500;
-}
-
-.claude-badge {
-    background: rgba(80, 70, 228, 0.1);
-    color: var(--claude-color);
-}
-
-.gpt4-badge {
-    background: rgba(25, 195, 125, 0.1);
-    color: var(--gpt4-color);
-}
-
-.dialogue-badge {
-    background: rgba(139, 92, 246, 0.1);
-    color: var(--dialogue-color);
-}
-
-/* Paper Card Updates */
-.research-card {
-    display: flex;
-    flex-direction: column;
-}
-
-.paper-info {
-    flex: 1;
-}
-
-.date {
-    font-size: 0.875rem;
-    color: #64748b;
-    margin-bottom: 0.5rem;
-    display: block;
-}
-
-.paper-info h2 a {
-    color: var(--text-color);
-    text-decoration: none;
-    transition: color 0.2s;
-}
-
-.paper-info h2 a:hover {
-    color: var(--primary-color);
 } 

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{paper_title}} ({{arxiv_id}}) - LLM-Lens</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body class="paper-page">
+    <header>
+        <nav>
+            <div class="logo"><a href="../index.html">LLM-Lens</a></div>
+            <div class="nav-links">
+                <a href="../index.html#papers">All Papers</a>
+                <a href="../about.html">About</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <article class="paper-discussion">
+            <header class="paper-header">
+                <h1>{{paper_title}}</h1>
+                <div class="paper-meta">
+                    <p class="reference">Reference: {{arxiv_id}}</p>
+                    <p class="publication-date">Published: {{date}}</p>
+                    <a href="{{arxiv_url}}" class="paper-link">Read Original Paper</a>
+                </div>
+            </header>
+
+            <section class="claude-analysis">
+                <h2>Claude's Analysis</h2>
+                <div class="model-meta">
+                    <span class="model-name">Claude</span>
+                    <span class="model-version">v3.0</span>
+                </div>
+                <div class="analysis-content">
+                    <div class="log-line">
+                        {{claude_log_line}}
+                    </div>
+                    
+                    <div class="detailed-analysis">
+                        <h3>Detailed Analysis</h3>
+                        {{claude_detailed}}
+                    </div>
+                    
+                    <div class="key-insights">
+                        <h3>Key Insights</h3>
+                        {{claude_insights}}
+                    </div>
+                    
+                    <div class="concerns">
+                        <h3>Concerns</h3>
+                        {{claude_concerns}}
+                    </div>
+                    
+                    <div class="warhol-take">
+                        <h3>What Would Andy Warhol Do?</h3>
+                        <p class="quote">{{claude_warhol}}</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="gpt4-analysis">
+                <h2>GPT-4's Analysis</h2>
+                <div class="model-meta">
+                    <span class="model-name">GPT-4</span>
+                    <span class="model-version">v4.0</span>
+                </div>
+                <div class="analysis-content">
+                    <div class="log-line">
+                        {{gpt4_log_line}}
+                    </div>
+                    
+                    <div class="detailed-analysis">
+                        <h3>Detailed Analysis</h3>
+                        {{gpt4_detailed}}
+                    </div>
+                    
+                    <div class="key-insights">
+                        <h3>Key Insights</h3>
+                        {{gpt4_insights}}
+                    </div>
+                    
+                    <div class="concerns">
+                        <h3>Concerns</h3>
+                        {{gpt4_concerns}}
+                    </div>
+                    
+                    <div class="warhol-take">
+                        <h3>What Would Andy Warhol Do?</h3>
+                        <p class="quote">{{gpt4_warhol}}</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="model-dialogue">
+                <h2>Model Dialogue</h2>
+                <div class="dialogue-content">
+                    {{dialogue}}
+                </div>
+            </section>
+        </article>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>LLM-Lens | A platform for AI research discussion</p>
+            <p class="art-reference">Part of <a href="https://standardtesting.io/llm-art">Modern Concept Model Conceptual Art</a></p>
+        </div>
+    </footer>
+</body>
+</html> 
