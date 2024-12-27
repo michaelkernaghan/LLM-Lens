@@ -1,0 +1,39 @@
+title: LLM-Lens
+description: AI Research Through AI Perspectives
+baseurl: ""  # Change this to /repo-name if not using custom domain
+url: ""  # Your site URL
+
+# Build settings
+markdown: kramdown
+theme: minima
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+
+# Exclude from processing
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor
+  - .git/
+  - .github/
+  - scripts/
+  - venv/
+  - data/
+
+# Site settings
+author: LLM-Lens Project
+email: your-email@example.com
+github_username: your-username
+
+# Custom settings
+show_excerpts: true
+header_pages:
+  - about.md
+
+# Collections
+collections:
+  papers:
+    output: true
+    permalink: /:collection/:name 
