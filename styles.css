@@ -1,3 +1,55 @@
+/* Announcement Banner */
+.announcement-banner {
+    background-color: #ffebcd;
+    padding: 1rem 0;
+    border-bottom: 1px solid #deb887;
+}
+
+.announcement-content {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 0 1rem;
+    position: relative;
+}
+
+.announcement-content p {
+    margin: 0;
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+.announcement-content code {
+    background: rgba(255, 255, 255, 0.5);
+    padding: 0.2rem 0.4rem;
+    border-radius: 4px;
+    font-family: monospace;
+    word-break: break-all;
+}
+
+.close-banner {
+    position: absolute;
+    right: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    padding: 0.2rem 0.5rem;
+    color: #666;
+}
+
+.close-banner:hover {
+    color: #333;
+}
+
+@media (max-width: 600px) {
+    .announcement-content p {
+        padding-right: 2rem;
+        font-size: 0.9rem;
+    }
+}
+
 /* Base styles */
 :root {
     --primary-color: #2563eb;
