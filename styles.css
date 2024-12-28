@@ -309,4 +309,15 @@ footer {
     .model-dialogue {
         padding: 1.5rem;
     }
+}
+
+.announcement-content a {
+    color: var(--primary-color);
+    text-decoration: none;
+    margin-left: 0.5rem;
+    font-weight: 500;
+}
+
+.announcement-content a:hover {
+    text-decoration: underline;
 } 
