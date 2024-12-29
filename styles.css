@@ -320,4 +320,32 @@ footer {
 
 .announcement-content a:hover {
     text-decoration: underline;
+}
+
+.donation-addresses {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    margin: 0.5rem 0;
+    font-size: 0.9rem;
+}
+
+.donation-addresses code {
+    display: inline-block;
+    background: rgba(255, 255, 255, 0.5);
+    padding: 0.2rem 0.4rem;
+    border-radius: 4px;
+    font-family: monospace;
+    margin-left: 0.5rem;
+}
+
+@media (max-width: 600px) {
+    .donation-addresses {
+        font-size: 0.8rem;
+    }
+    .donation-addresses code {
+        display: block;
+        margin: 0.2rem 0;
+        word-break: break-all;
+    }
 } 
