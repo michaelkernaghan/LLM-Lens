@@ -1,271 +1,330 @@
 /* Variables */
 :root {
-    --primary-color: #2c3e50;
-    --secondary-color: #3498db;
-    --background-color: #f9f9f9;
-    --text-color: #333;
-    --border-color: #ddd;
-    --section-spacing: 2rem;
-    --max-width: 800px;
+    --primary-color: #1a1a1a;
+    --secondary-color: #4a4a4a;
+    --accent-color: #6366f1;
+    --background-color: #ffffff;
+    --text-color: #2a2a2a;
+    --border-color: #e5e7eb;
+    --claude-color: #5046e4;
+    --gpt4-color: #19c37d;
+    --max-width: 1200px;
+    --section-spacing: 4rem;
 }
 
 /* Base styles */
 body {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    font-family: 'Space Grotesk', -apple-system, BlinkMacSystemFont, sans-serif;
     line-height: 1.6;
     color: var(--text-color);
-    background-color: var(--background-color);
     margin: 0;
     padding: 0;
+    background: var(--background-color);
 }
 
 /* Header and navigation */
 header {
-    background-color: var(--primary-color);
-    padding: 1rem;
-    margin-bottom: var(--section-spacing);
+    background: transparent;
+    padding: 1.5rem 0;
+    position: absolute;
+    width: 100%;
+    z-index: 100;
 }
 
 nav {
     max-width: var(--max-width);
     margin: 0 auto;
+    padding: 0 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-nav a {
-    color: white;
+.logo {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--primary-color);
+}
+
+.nav-links a {
+    margin-left: 2rem;
+    color: var(--primary-color);
     text-decoration: none;
-    margin-right: 1rem;
+    font-weight: 500;
+    transition: color 0.3s ease;
 }
 
-nav a:hover {
-    text-decoration: underline;
+.nav-links a:hover {
+    color: var(--accent-color);
 }
 
-/* Main content */
-main {
+/* Hero Section */
+.hero {
+    padding: 8rem 2rem 4rem;
+    background: linear-gradient(to bottom, #f8f9ff, #ffffff);
+}
+
+.hero-content {
     max-width: var(--max-width);
     margin: 0 auto;
-    padding: 0 1rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
 }
 
-/* Paper analysis */
-.paper-analysis {
-    background-color: white;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    padding: 2rem;
-    margin-bottom: var(--section-spacing);
-}
-
-.paper-analysis h1 {
-    color: var(--primary-color);
-    margin-top: 0;
-    margin-bottom: 1rem;
-    font-size: 2rem;
-    line-height: 1.3;
-}
-
-.paper-link {
-    margin-bottom: var(--section-spacing);
-}
-
-.paper-link a {
-    color: var(--secondary-color);
-    text-decoration: none;
-}
-
-.paper-link a:hover {
-    text-decoration: underline;
-}
-
-/* Analysis sections */
-section {
-    margin-bottom: var(--section-spacing);
-    padding-bottom: var(--section-spacing);
-    border-bottom: 1px solid var(--border-color);
-}
-
-section:last-child {
-    border-bottom: none;
-}
-
-section h2 {
-    color: var(--primary-color);
-    margin-bottom: 1rem;
-}
-
-section h3 {
-    color: var(--primary-color);
-    margin-top: 1.5rem;
-    margin-bottom: 0.5rem;
-}
-
-/* Log line */
-.log-line {
-    font-size: 1.1rem;
-    font-style: italic;
-    color: var(--primary-color);
+.hero-text h1 {
+    font-size: 3.5rem;
+    line-height: 1.2;
     margin-bottom: 1.5rem;
-    padding: 1rem;
-    background-color: #f8f9fa;
-    border-left: 4px solid var(--secondary-color);
+    color: var(--primary-color);
 }
 
-/* Lists */
-.key-insights ul,
-.concerns ul {
-    list-style-type: none;
-    padding-left: 0;
+.hero-text .subtitle {
+    font-size: 1.25rem;
+    color: var(--secondary-color);
+    margin-bottom: 2rem;
 }
 
-.key-insights li,
-.concerns li {
-    margin-bottom: 0.5rem;
-    padding-left: 1.5rem;
+.hero-image {
     position: relative;
 }
 
-.key-insights li:before,
-.concerns li:before {
-    content: "•";
-    color: var(--secondary-color);
+.agent-portrait {
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+}
+
+.image-caption {
     position: absolute;
-    left: 0;
+    bottom: -2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(255,255,255,0.9);
+    padding: 0.5rem 1.5rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    color: var(--secondary-color);
+    backdrop-filter: blur(10px);
 }
 
-/* Warhol take */
-.warhol-take {
-    background-color: #f8f9fa;
-    padding: 1.5rem;
-    border-radius: 4px;
-    margin-top: 1.5rem;
+/* Philosophy Brief */
+.philosophy-brief {
+    padding: 4rem 2rem;
+    background: var(--background-color);
 }
 
-.warhol-take h3 {
-    color: var(--primary-color);
-    margin-top: 0;
+.philosophy-content {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    text-align: center;
 }
 
-/* Dialogue */
-.dialogue {
-    background-color: #f8f9fa;
-    padding: 1.5rem;
-    border-radius: 4px;
-}
-
-.dialogue p {
+.philosophy-content h2 {
+    font-size: 2rem;
     margin-bottom: 1rem;
-}
-
-.dialogue p:last-child {
-    margin-bottom: 0;
-}
-
-.dialogue .speaker {
-    font-weight: bold;
     color: var(--primary-color);
+}
+
+.philosophy-content p {
+    font-size: 1.25rem;
+    color: var(--secondary-color);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Research Grid */
+.research-grid {
+    padding: 4rem 2rem;
+    background: #f8f9ff;
+}
+
+.research-grid h2 {
+    max-width: var(--max-width);
+    margin: 0 auto 2rem;
+    font-size: 2rem;
+    color: var(--primary-color);
+}
+
+.research-card {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    background: white;
+    border-radius: 20px;
+    padding: 2rem;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
+
+.paper-info {
+    margin-bottom: 1.5rem;
+}
+
+.date {
+    color: var(--secondary-color);
+    font-size: 0.9rem;
+}
+
+.paper-info h3 {
+    margin: 0.5rem 0;
+    font-size: 1.5rem;
+}
+
+.paper-info a {
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.paper-info a:hover {
+    color: var(--accent-color);
+}
+
+.authors {
+    color: var(--secondary-color);
+    margin: 0.5rem 0;
+}
+
+.abstract {
+    color: var(--text-color);
+    margin: 1rem 0;
+}
+
+.model-indicators {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.model-indicators span {
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.claude-badge {
+    background: rgba(80,70,228,0.1);
+    color: var(--claude-color);
+}
+
+.gpt4-badge {
+    background: rgba(25,195,125,0.1);
+    color: var(--gpt4-color);
+}
+
+.dialogue-badge {
+    background: rgba(99,102,241,0.1);
+    color: var(--accent-color);
 }
 
 /* Footer */
 footer {
-    text-align: center;
-    padding: 2rem 1rem;
-    background-color: var(--primary-color);
+    background: var(--primary-color);
     color: white;
-    margin-top: var(--section-spacing);
+    padding: 3rem 2rem;
 }
 
-footer a {
+.footer-content {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    text-align: center;
+}
+
+.art-reference {
+    margin-top: 1rem;
+    opacity: 0.8;
+}
+
+.footer-content a {
     color: white;
     text-decoration: none;
 }
 
-footer a:hover {
+.footer-content a:hover {
     text-decoration: underline;
 }
 
-/* Responsive design */
-@media (max-width: 600px) {
-    :root {
-        --section-spacing: 1.5rem;
-    }
-
-    .paper-analysis {
-        padding: 1rem;
-    }
-
-    .paper-analysis h1 {
-        font-size: 1.5rem;
-    }
-
-    .log-line {
-        font-size: 1rem;
-    }
+/* Announcement Banner */
+.announcement-banner {
+    background-color: #f8f9ff;
+    padding: 1rem 0;
+    border-bottom: 1px solid var(--border-color);
 }
 
-/* Crypto page styles */
-.crypto-content {
+.announcement-content {
     max-width: var(--max-width);
     margin: 0 auto;
-    padding: 2rem 1rem;
-}
-
-.token-info, .donation-options, .for-ai-agents, .transparency {
-    background: white;
-    border-radius: 8px;
-    padding: 2rem;
-    margin-bottom: 2rem;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.token-details, .eth-address {
-    background: var(--background-color);
-    padding: 1.5rem;
-    border-radius: 4px;
-    margin: 1.5rem 0;
-}
-
-.eth-address code {
-    display: block;
-    background: rgba(255, 255, 255, 0.5);
-    padding: 1rem;
-    border-radius: 4px;
-    font-family: monospace;
-    word-break: break-all;
-    margin-top: 0.5rem;
-    border: 1px solid var(--border-color);
-}
-
-.donation-note {
-    font-style: italic;
-    color: #666;
-    margin-top: 1.5rem;
-}
-
-.for-ai-agents ul, .transparency ul {
-    list-style-type: none;
-    padding-left: 0;
-}
-
-.for-ai-agents li, .transparency li {
-    margin-bottom: 0.5rem;
-    padding-left: 1.5rem;
+    padding: 0 2rem;
     position: relative;
 }
 
-.for-ai-agents li:before, .transparency li:before {
-    content: "•";
-    color: var(--secondary-color);
-    position: absolute;
-    left: 0;
+.announcement-content p {
+    margin: 0.5rem 0;
+    font-size: 0.95rem;
+    line-height: 1.5;
 }
 
-@media (max-width: 600px) {
-    .token-info, .donation-options, .for-ai-agents, .transparency {
+.announcement-content a {
+    color: var(--accent-color);
+    text-decoration: none;
+}
+
+.close-banner {
+    position: absolute;
+    right: 2rem;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: var(--secondary-color);
+    padding: 0.2rem 0.5rem;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .hero-content {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 2rem;
+    }
+
+    .hero-text h1 {
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    :root {
+        --section-spacing: 2rem;
+    }
+
+    .nav-links a {
+        margin-left: 1rem;
+    }
+
+    .hero {
+        padding: 6rem 1rem 2rem;
+    }
+
+    .research-card {
         padding: 1.5rem;
     }
-    
-    .token-details, .eth-address {
-        padding: 1rem;
+
+    .model-indicators {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-text h1 {
+        font-size: 2rem;
+    }
+
+    .philosophy-content h2 {
+        font-size: 1.5rem;
     }
 } 
