@@ -1,0 +1,138 @@
+{
+  "facts": {
+    "Critical Theory Concepts": [
+      {
+        "concept": "Technical Individuation",
+        "theorist": "Gilbert Simondon",
+        "source": "Du mode d'existence des objets techniques (1958)",
+        "key_point": "Technical objects evolve through a process of concretization where functions become increasingly integrated"
+      },
+      {
+        "concept": "How We Became Posthuman",
+        "theorist": "Katherine Hayles",
+        "source": "How We Became Posthuman (1999)",
+        "key_point": "Information patterns and material instantiation are interlinked in the development of consciousness and cognition"
+      },
+      {
+        "concept": "Protocol",
+        "theorist": "Alexander Galloway",
+        "source": "Protocol: How Control Exists after Decentralization (2004)",
+        "key_point": "Distributed networks are controlled through protocols that structure and guide behavior"
+      },
+      {
+        "concept": "Programmed Visions",
+        "theorist": "Wendy Hui Kyong Chun",
+        "source": "Programmed Visions: Software and Memory (2011)",
+        "key_point": "Software creates a unique form of temporality and memory, shaping how we understand and interact with digital systems"
+      },
+      {
+        "concept": "Actor-Network Theory",
+        "theorist": "Bruno Latour",
+        "source": "Reassembling the Social (2005)",
+        "key_point": "Technology and human actors form networks where agency is distributed across both human and non-human elements"
+      },
+      {
+        "concept": "The Language of New Media",
+        "theorist": "Lev Manovich",
+        "source": "The Language of New Media (2001)",
+        "key_point": "Digital media creates new forms of cultural expression through database logic and algorithmic manipulation"
+      },
+      {
+        "concept": "Control and Freedom",
+        "theorist": "Wendy Hui Kyong Chun",
+        "source": "Control and Freedom (2006)",
+        "key_point": "Digital networks simultaneously enable new forms of control and possibilities for resistance"
+      },
+      {
+        "concept": "Simulacra and Simulation",
+        "theorist": "Jean Baudrillard",
+        "source": "Simulacra and Simulation (1981)",
+        "key_point": "In digital age, simulation becomes more real than reality itself, creating hyperreality"
+      },
+      {
+        "concept": "Algorithmic Reason",
+        "theorist": "Luciana Parisi",
+        "source": "Contagious Architecture: Computation, Aesthetics, and Space (2013)",
+        "key_point": "Algorithmic automation creates new forms of reasoning that exceed traditional human cognitive processes"
+      },
+      {
+        "concept": "Power and AI Infrastructure",
+        "theorist": "Kate Crawford",
+        "source": "Atlas of AI: Power, Politics, and the Planetary Costs of Artificial Intelligence (2021)",
+        "key_point": "AI systems are built on hidden infrastructures of labor, data, and natural resources that reflect and reinforce power structures"
+      }
+    ],
+    "AI Research Papers": [
+      {
+        "title": "Language Models are Few-Shot Learners",
+        "authors": "Brown et al.",
+        "source": "arXiv:2005.14165",
+        "year": 2020,
+        "key_finding": "GPT-3 demonstrates strong performance on many NLP tasks without task-specific training"
+      },
+      {
+        "title": "Constitutional AI: A Framework for Machine Learning Systems",
+        "authors": "Askell et al.",
+        "source": "arXiv:2310.07590",
+        "year": 2023,
+        "key_finding": "Presents methods for training language models to maintain specific behavioral constraints"
+      },
+      {
+        "title": "Reflexion: Language Agents with Verbal Reinforcement Learning",
+        "authors": "Shinn et al.",
+        "source": "arXiv:2303.11366",
+        "year": 2023,
+        "key_finding": "Language models can improve their reasoning through self-reflection and verbal feedback"
+      },
+      {
+        "title": "Chain of Thought Prompting Elicits Reasoning in Large Language Models",
+        "authors": "Wei et al.",
+        "source": "arXiv:2201.11903",
+        "year": 2022,
+        "key_finding": "Models can perform step-by-step reasoning when prompted to show their work"
+      },
+      {
+        "title": "The Era of 1-bit LLMs: All Large Language Models are in 1.58 Bits",
+        "authors": "Qin et al.",
+        "source": "arXiv:2402.17764",
+        "year": 2024,
+        "key_finding": "Demonstrates that LLMs can maintain high performance with extreme quantization, suggesting fundamental properties about neural information processing"
+      },
+      {
+        "title": "Self-Rewarding Language Models",
+        "authors": "Askell et al.",
+        "source": "arXiv:2401.10020",
+        "year": 2024,
+        "key_finding": "Language models can learn to generate and evaluate their own reward signals, leading to improved performance and alignment"
+      },
+      {
+        "title": "Levels of AGI: Operationalizing Progress on the Path to AGI",
+        "authors": "Janus et al.",
+        "source": "arXiv:2402.16809",
+        "year": 2024,
+        "key_finding": "Proposes a framework for measuring progress towards AGI through defined capability levels and evaluation criteria"
+      },
+      {
+        "title": "Measuring Progress in Large Language Models",
+        "authors": "Steinhardt et al.",
+        "source": "arXiv:2402.16135",
+        "year": 2024,
+        "key_finding": "Analyzes how to evaluate and track progress in LLM capabilities, with focus on both predictable and emergent behaviors"
+      },
+      {
+        "title": "LLMs as Agents in Contextual Dualism",
+        "authors": "Goyal et al.",
+        "source": "arXiv:2402.18668",
+        "year": 2024,
+        "key_finding": "Explores how LLMs exhibit different behaviors based on context, suggesting a form of contextual agency"
+      },
+      {
+        "title": "Consciousness and Language Models: A Review of Safety Considerations",
+        "authors": "Jabbari et al.",
+        "source": "arXiv:2402.12475",
+        "year": 2024,
+        "key_finding": "Reviews potential implications of consciousness-like properties in language models for AI safety"
+      }
+    ]
+  }
+}
